@@ -1,0 +1,85 @@
+.kamar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kamar-detail-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.kamar-header {
+  background: var(--secondary);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.kamar-header h3 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-badge.tersedia {
+  background-color: #e8f5e9;
+  color: var(--success);
+}
+
+.status-badge.penuh {
+  background-color: #fee2e2;
+  color: var(--error);
+}
+
+.kamar-body {
+  padding: 30px;
+}
+
+.info-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 5px;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.info-value.price {
+  color: var(--primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.kamar-action {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px;
+}

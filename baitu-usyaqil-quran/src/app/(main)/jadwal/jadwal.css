@@ -1,0 +1,81 @@
+.jadwal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.jadwal-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+}
+
+.jadwal-time {
+  background: var(--primary);
+  color: var(--white);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  text-align: center;
+}
+
+.day {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.time {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.jadwal-info {
+  padding: 20px;
+  flex: 1;
+}
+
+.jadwal-info h3 {
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.kitab {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.tag.type {
+  background: var(--secondary);
+  color: var(--text-main);
+}
+
+.tag.wajib.wajib {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.tag.wajib.opsional {
+  background: #e3f2fd;
+  color: #1565c0;
+}

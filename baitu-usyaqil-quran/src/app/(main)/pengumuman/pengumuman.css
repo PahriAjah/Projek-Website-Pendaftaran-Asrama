@@ -1,0 +1,48 @@
+.pengumuman-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pengumuman-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--secondary-dark);
+}
+
+.pengumuman-card.pinned {
+  border-left-color: var(--primary);
+  background: #fcfdfc;
+}
+
+.pengumuman-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.kategori {
+  background: var(--secondary);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.pengumuman-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.isi {
+  color: var(--text-muted);
+  line-height: 1.6;
+  white-space: pre-wrap;
+}

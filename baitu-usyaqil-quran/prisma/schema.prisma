@@ -1,0 +1,69 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Kamar {
+  id              String      @id @default(uuid())
+  namaTipe        String
+  kapasitas       Int
+  harga           String
+  fasilitas       String      // Boleh disimpan sebagai JSON string atau comma-separated
+  foto            String      // Boleh disimpan sebagai JSON string atau comma-separated URLs
+  statusTersedia  Boolean     @default(true)
+  sisaSlot        Int
+  
+  pendaftars      Pendaftar[]
+}
+
+model Pendaftar {
+  id                 String   @id @default(uuid())
+  nama               String
+  tanggalLahir       String
+  alamat             String
+  noHp               String
+  noHpWali           String
+  pendidikanSekarang String
+  kamarPilihanId     String
+  status             String   @default("Baru") // Baru, Diproses, Diterima, Ditolak
+  catatanAdmin       String?
+  tanggalDaftar      DateTime @default(now())
+
+  kamarPilihan       Kamar    @relation(fields: [kamarPilihanId], references: [id])
+}
+
+model JadwalKegiatan {
+  id            String   @id @default(uuid())
+  judul         String
+  jenis         String   // mengaji, kajian, khusus
+  kitab         String?
+  tanggalHari   String   // Misal: "Senin-Jumat" atau "Sabtu"
+  jam           String   // Misal: "18:00 - 19:30"
+  wajibOpsional String   @default("Wajib") // Wajib, Opsional
+}
+
+model Pengumuman {
+  id             String   @id @default(uuid())
+  judul          String
+  isi            String
+  kategori       String   // Pendaftaran, Kegiatan, Umum
+  pinned         Boolean  @default(false)
+  tanggalPublish DateTime @default(now())
+}
+
+model Galeri {
+  id       String   @id @default(uuid())
+  urlFoto  String
+  kategori String   // Bangunan, Kegiatan, Pengurus
+  caption  String?
+}
+
+model AdminUser {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  passwordHash String
+}
