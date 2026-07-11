@@ -2,7 +2,7 @@
   background: linear-gradient(rgba(20, 20, 20, 0.75), rgba(0, 0, 0, 0.9)), url('/images/hero-bg.jpg?v=8') no-repeat center center;
   background-size: cover;
   background-blend-mode: luminosity;
-  background-attachment: scroll; /* Forcing normal scroll explicitly */
+  background-attachment: fixed; /* Parallax effect */
   color: var(--white);
   padding: 120px 0;
   text-align: center;
