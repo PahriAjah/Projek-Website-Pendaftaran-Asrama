@@ -76,6 +76,12 @@ button {
   margin-bottom: 10px;
 }
 
+@media (max-width: 768px) {
+  .title-section h2 {
+    font-size: 2rem;
+  }
+}
+
 .title-section p {
   color: var(--text-muted);
   font-size: 1.1rem;
