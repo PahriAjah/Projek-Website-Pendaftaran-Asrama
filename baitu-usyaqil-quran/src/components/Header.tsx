@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import './Header.css';
 
 export default function Header() {
@@ -21,7 +22,14 @@ export default function Header() {
         </button>
 
         <Link href="/" className="logo" onClick={closeMenu}>
-          Baitu 'Usyaqil Qur'an
+          <Image 
+            src="/images/logo.svg" 
+            alt="Logo BUQ" 
+            width={40} 
+            height={40} 
+            className="logo-img"
+          />
+          <span className="logo-text">Baitu 'Usyaqil Qur'an</span>
         </Link>
 
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
