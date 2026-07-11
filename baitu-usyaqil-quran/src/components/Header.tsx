@@ -13,16 +13,16 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-content">
-        <Link href="/" className="logo" onClick={closeMenu}>
-          Baitu 'Usyaqil Qur'an
-        </Link>
-        
         {/* Hamburger Icon */}
         <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="Toggle Menu">
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
         </button>
+
+        <Link href="/" className="logo" onClick={closeMenu}>
+          Baitu 'Usyaqil Qur'an
+        </Link>
 
         <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
