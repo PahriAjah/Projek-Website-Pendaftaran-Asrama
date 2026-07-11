@@ -23,7 +23,7 @@ export default function Header() {
 
         <Link href="/" className="logo" onClick={closeMenu}>
           <Image 
-            src="/images/logo.svg" 
+            src="/images/logo.png" 
             alt="Logo BUQ" 
             width={40} 
             height={40} 
