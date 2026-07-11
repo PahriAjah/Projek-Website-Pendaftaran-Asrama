@@ -1,5 +1,6 @@
 'use server';
 
+import bcrypt from "bcryptjs";
 import { PrismaClient } from '@prisma/client';
 import { revalidatePath } from 'next/cache';
 import { getServerSession } from 'next-auth';
