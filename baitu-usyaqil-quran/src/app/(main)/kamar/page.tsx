@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import Link from 'next/link';
+import ScrollReveal from '@/components/ScrollReveal';
 import './kamar.css';
 
 const prisma = new PrismaClient();
@@ -12,14 +13,17 @@ export default async function KamarPage() {
   return (
     <div className="section">
       <div className="container">
-        <div className="title-section">
-          <h2>Informasi Kamar & Harga</h2>
-          <p>Pilih kamar yang sesuai dengan kebutuhan Anda. Kuota terbatas.</p>
-        </div>
+        <ScrollReveal>
+          <div className="title-section">
+            <h2>Informasi Kamar & Harga</h2>
+            <p>Pilih kamar yang sesuai dengan kebutuhan Anda. Kuota terbatas.</p>
+          </div>
+        </ScrollReveal>
 
         <div className="kamar-list">
-          {kamars.length > 0 ? kamars.map(kamar => (
-            <div key={kamar.id} className="kamar-detail-card">
+          {kamars.length > 0 ? kamars.map((kamar, index) => (
+            <ScrollReveal key={kamar.id} delay={index * 0.1}>
+              <div className="kamar-detail-card">
               <div className="kamar-header">
                 <h3>{kamar.namaTipe}</h3>
                 <div className={`status-badge ${kamar.statusTersedia ? 'tersedia' : 'penuh'}`}>
@@ -52,6 +56,7 @@ export default async function KamarPage() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           )) : (
             <p className="empty-state">Belum ada informasi kamar.</p>
           )}

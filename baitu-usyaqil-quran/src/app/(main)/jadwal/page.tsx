@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+import ScrollReveal from '@/components/ScrollReveal';
 import './jadwal.css';
 
 const prisma = new PrismaClient();
@@ -12,14 +13,17 @@ export default async function JadwalPage() {
   return (
     <div className="section bg-light">
       <div className="container">
-        <div className="title-section">
-          <h2>Jadwal & Kegiatan</h2>
-          <p>Kegiatan rutin dan kajian kitab di Baitu 'Usyaqil Qur'an</p>
-        </div>
+        <ScrollReveal>
+          <div className="title-section">
+            <h2>Jadwal & Kegiatan</h2>
+            <p>Kegiatan rutin dan kajian kitab di Baitu 'Usyaqil Qur'an</p>
+          </div>
+        </ScrollReveal>
 
         <div className="jadwal-grid">
-          {jadwal.length > 0 ? jadwal.map(j => (
-            <div key={j.id} className="jadwal-card">
+          {jadwal.length > 0 ? jadwal.map((j, index) => (
+            <ScrollReveal key={j.id} delay={index * 0.1}>
+              <div className="jadwal-card">
               <div className="jadwal-time">
                 <span className="day">{j.tanggalHari}</span>
                 <span className="time">{j.jam}</span>
@@ -33,6 +37,7 @@ export default async function JadwalPage() {
                 </div>
               </div>
             </div>
+            </ScrollReveal>
           )) : (
             <p className="empty-state">Belum ada jadwal kegiatan.</p>
           )}

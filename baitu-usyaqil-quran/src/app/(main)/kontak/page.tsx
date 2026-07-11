@@ -1,16 +1,20 @@
+import ScrollReveal from '@/components/ScrollReveal';
 import './kontak.css';
 
 export default function KontakPage() {
   return (
     <div className="section">
       <div className="container">
-        <div className="title-section">
-          <h2>Kontak Kami</h2>
-          <p>Hubungi pengurus Baitu 'Usyaqil Qur'an untuk informasi lebih lanjut.</p>
-        </div>
+        <ScrollReveal>
+          <div className="title-section">
+            <h2>Kontak Kami</h2>
+            <p>Hubungi pengurus Baitu 'Usyaqil Qur'an untuk informasi lebih lanjut.</p>
+          </div>
+        </ScrollReveal>
 
         <div className="kontak-wrapper">
-          <div className="kontak-info-card">
+          <ScrollReveal delay={0.1}>
+            <div className="kontak-info-card">
             <h3>Informasi Kontak</h3>
             <div className="info-item">
               <span className="icon">📍</span>
@@ -37,13 +41,16 @@ export default function KontakPage() {
               Chat via WhatsApp
             </a>
           </div>
+          </ScrollReveal>
 
-          <div className="map-card">
-            {/* Dummy Map Embed for MVP */}
-            <div className="map-placeholder">
-              <p>Peta Lokasi Google Maps</p>
+          <ScrollReveal delay={0.2}>
+            <div className="map-card">
+              {/* Dummy Map Embed for MVP */}
+              <div className="map-placeholder">
+                <p>Peta Lokasi Google Maps</p>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </div>

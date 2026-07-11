@@ -1,5 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import DaftarForm from './DaftarForm';
+import ScrollReveal from '@/components/ScrollReveal';
 import './daftar.css';
 
 const prisma = new PrismaClient();
@@ -14,13 +15,17 @@ export default async function DaftarPage() {
   return (
     <div className="section bg-light">
       <div className="container">
-        <div className="title-section">
-          <h2>Form Pendaftaran Asrama</h2>
-          <p>Silakan isi data diri Anda. Pembayaran dilakukan secara offline setelah konfirmasi.</p>
-        </div>
-        <div className="form-container">
-          <DaftarForm kamars={kamars} />
-        </div>
+        <ScrollReveal>
+          <div className="title-section">
+            <h2>Form Pendaftaran Asrama</h2>
+            <p>Silakan isi data diri Anda. Pembayaran dilakukan secara offline setelah konfirmasi.</p>
+          </div>
+        </ScrollReveal>
+        <ScrollReveal delay={0.2}>
+          <div className="form-container">
+            <DaftarForm kamars={kamars} />
+          </div>
+        </ScrollReveal>
       </div>
     </div>
   );
