@@ -25,8 +25,8 @@ export default function Header() {
           <Image 
             src="/images/logo.png" 
             alt="Logo BUQ" 
-            width={40} 
-            height={40} 
+            width={60} 
+            height={60} 
             className="logo-img"
           />
           <span className="logo-text">Baitu 'Usyaqil Qur'an</span>
