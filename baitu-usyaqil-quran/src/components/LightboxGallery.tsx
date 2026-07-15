@@ -6,12 +6,12 @@ export default function LightboxGallery({ initialPhotos = [] }: { initialPhotos?
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
 
   const photos = initialPhotos.length > 0 ? initialPhotos : [
-    { id: '1', urlFoto: '/images/galeri-1.jpg', kategori: 'Kegiatan', caption: 'Kajian Rutin & Diskusi' },
-    { id: '2', urlFoto: '/images/galeri-2.jpg', kategori: 'Fasilitas', caption: 'Ruang Belajar Bersama' },
-    { id: '3', urlFoto: '/images/galeri-3.jpg', kategori: 'Fasilitas', caption: 'Kenyamanan Kamar Santri' },
-    { id: '4', urlFoto: '/images/galeri-4.jpg', kategori: 'Kegiatan', caption: 'Membaca Al-Qur\'an' },
-    { id: '5', urlFoto: '/images/galeri-5.jpg', kategori: 'Bangunan', caption: 'Tampak Bangunan Asrama' },
-    { id: '6', urlFoto: '/images/galeri-6.jpg', kategori: 'Kegiatan', caption: 'Diskusi Kelompok' },
+    { id: '1', urlFoto: '/images/galeri-1.jpg?v=2', kategori: 'Kegiatan', caption: 'Kajian Rutin & Diskusi' },
+    { id: '2', urlFoto: '/images/galeri-2.jpg?v=2', kategori: 'Fasilitas', caption: 'Ruang Belajar Bersama' },
+    { id: '3', urlFoto: '/images/galeri-3.jpg?v=2', kategori: 'Fasilitas', caption: 'Kenyamanan Kamar Santri' },
+    { id: '4', urlFoto: '/images/galeri-4.jpg?v=2', kategori: 'Kegiatan', caption: 'Membaca Al-Qur\'an' },
+    { id: '5', urlFoto: '/images/galeri-5.jpg?v=2', kategori: 'Bangunan', caption: 'Tampak Bangunan Asrama' },
+    { id: '6', urlFoto: '/images/galeri-6.jpg?v=2', kategori: 'Kegiatan', caption: 'Diskusi Kelompok' },
   ];
 
   return (
